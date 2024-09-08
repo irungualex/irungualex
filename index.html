@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediTop - We Care About Your Health</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+background-color:#f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+padding:20px 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        nav ul li {
+            margin-left: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+        }
+        .hero-content {
+            width: 50%;
+        }
+        .hero-image {
+            width: 45%;
+            height: 300px;
+            background-color: #ddd;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .stat {
+            text-align: center;
+        }
+        .services {
+            padding: 2rem 0;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        .service {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            text-align: center;
+        }
+        .specialties {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+        .specialty {
+            background-color: #f4f4f4;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+        .category {
+            background-color: #f4f4f4;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        .doctors {
+            padding: 2rem 0;
+        }
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        .doctor {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            text-align: center;
+        }
+        .doctor-image {
+            width: 100%;
+            height: 150px;
+            background-color: #ddd;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .step {
+            text-align: center;
+            width: 22%;
+        }
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+        }
+        .doctor-anywhere {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .doctor-content {
+            width: 45%;
+        }
+        .doctor-image {
+            width: 45%;
+            height: 200px;
+            background-color: #ddd;
+        }
+        .urgent-care {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .urgent-image {
+            width: 45%;
+            height: 200px;
+            background-color: #ddd;
+        }
+        .urgent-content {
+            width: 45%;
+        }
+        .testimonials {
+            margin-bottom: 40px;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .testimonial {
+            background-color: #fff;
+            padding: 20px;
+        }
+        .testimonial-image {
+            width: 50px;
+            height: 50px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .register {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-section {
+            width: 22%;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ccontainer">
+        <header>
+            <div class="logo">MediTop</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <div>
+                <a href="#" class="btn">Login</a>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>We Care About Your Health</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn">Book Now</a>
+                <button id="playVideo" class="btn">Play Video</button>
+            </div>
+            <div class="hero-image"></div>
+        </section>
+
+        <section class="stats">
+            <div class="stat">
+                <h2>95%</h2>
+                <p>Satisfaction</p>
+            </div>
+            <div class="stat">
+    
+                <p>Doctors</p>
+            </div>
+            <div class="stat">
+                <p>Patients</p>
+            </div>
+            <div class="stat">
+                <p>Support</p>
+            </div>
+        </section>
+
+        <section class="services">
+            <h2>Our Best Services</h2>
+            <div class="service-grid">
+                <div class="service">
+                    <h3>All Specialist</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="service">
+                    <h3>Private & Secure</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="service">
+                    <h3>Million Customers</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="service">
+                    <h3>Chatbot Support</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <div class="specialties">
+                <div class="specialty">Baby Health</div>
+                <div class="specialty">Stomach</div>
+                <div class="specialty">Psychiatry</div>
+                <div class="specialty">Urology</div>
+                <div class="specialty">Dermatology</div>
+                <div class="specialty">Infectious Disease</div>
+            </div>
+            <h3>Are You Looking For:</h3>
+            <div class="categories">
+                <div class="category">Doctors</div>
+                <div class="category">Consult</div>
+                <div class="category">Pharmacy</div>
+                <div class="category">Diagnostics</div>
+            </div>
+        </section>
+
+        <section class="doctors">
+            <h2>Our Best Doctors</h2>
+            <div class="doctor-grid">
+                <div class="doctor">
+                    <div class="doctor-image"></div>
+                    <h3>Dr. Alex, Ph.D.</h3>
+                </div>
+                <div class="doctor">
+                    <div class="doctor-image"></div>
+                    <h3>Dr. Robert, Ph.D.</h3>
+                </div>
+                <div class="doctor">
+                    <div class="doctor-image"></div>
+                    <h3>Dr. Angel, Ph.D.</h3>
+                </div>
+                <div class="doctor">
+                    <div class="doctor-image"></div>
+                    <h3>Dr. Rustin, Ph.D.</h3>
+                </div>
+            </div>
+        </section>
+ <section class="steps">
+            <h2>Easy Steps And Get Your Solution</h2>
+            <div class="step">
+                <div class="step-icon"></div>
+                <h3>Check Doctor's Profile</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"></div>
+                <h3>Request Consultation</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"></div>
+                <h3>Receive Your Consultation</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"></div>
+                <h3>Get Your Solution</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </section>
+
+        <section class="doctor-anywhere">
+            <div class="doctor-content">
+                <h2>Best Doctor Anywhere And Anytime</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="btn">Find Doctor Now</button>
+            </div>
+            <div class="doctor-image"></div>
+        </section>
+
+        <section class="urgent-care">
+            <div class="urgent-image"></div>
+            <div class="urgent-content">
+                <h2>Urgent Online Care Solution Your Problem</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="btn">Take Appointment</button>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What People Say About Us</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="testimonial-image"></div>
+                    <h3>Name</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-image"></div>
+                    <h3>Name</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="register">
+            <h2>Want to Register Easily?</h2>
+            <button class="btn">Submit Here</button>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MediTop</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="social-icons">
+                        <div class="social-icon"></div>
+                        <div class="social-icon"></div>
+                        <div class="social-icon"></div>
+                        <div class="social-icon"></div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Online Support</li>
+                        <li>Free Consultancy</li>
+                        <li>24/7 Service</li>
+                        <li>Make Appointment</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Consultation</li>
+                        <li>Pharmacy</li>
+                        <li>Diagnostic</li>
+                        <li>Emergency</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>User</h3>
+                    <ul>
+                        <li>Login</li>
+                        <li>Register</li>
+                        <li>Doctor Register</li>
+                        <li>Appointment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    </div>
+
+
+    <script>
+        document.getElementById('playVideo').addEventListener('click', function() {
+            alert('Video player functionality would be implemented here.');
+        });
+
+ document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Button clicked! Functionality would be implemented here.');
+            });
+        });
+    </script>
+</body>
+</html>
